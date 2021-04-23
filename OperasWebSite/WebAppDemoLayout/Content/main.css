@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.header {
+    background-color: darkblue;
+    color: white;
+    padding: 1px;
+}
+
+.content {
+    float: left;
+    margin: 10px;
+}
+
+.sidebar {
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    border: dotted 5px blue;
+    width: 180px;
+}
+
+.footer {
+    text-align: center;
+    clear: both;
+}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="header">
+        <h1>Bienvenido al sitio web de prueba</h1>
+    </div>
+
+    <div>
+        <nav>
+            @*lo que ve el usuario, la accion, el controlador*@
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("About", "About", "Home")
+        </nav>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <div class="sidebar">
+        @if (IsSectionDefined("SideBar"))
+        {
+            @RenderSection("SideBar")
+        }
+        else
+        {
+            <h3>Zona de prueba sidebar</h3>
+        }
+
+    </div>
+
+    <div class="footer">
+        <h3>info@sitio.com</h3>
+    </div>
+</body>
+</html>

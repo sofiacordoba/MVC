@@ -1,0 +1,50 @@
+﻿@model MVCTransportes.Models.Vehiculo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChoferID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChoferID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caracteristicas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caracteristicas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Matricula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

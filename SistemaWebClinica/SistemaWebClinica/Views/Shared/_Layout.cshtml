@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/ClinicaStyles.css" rel="stylesheet" />
+    <title>@ViewBag.Title Sistema Medicos</title>
+
+</head>
+<body>
+    <header>SISTEMA MEDICOS</header>
+    <div class="barra">
+        <ul>
+            <li><a href="/Home/Index">Home</a></li>
+            <li><a href="/Medico/Index">Medicos</a></li>
+
+        </ul>
+    </div>
+    <div class="container body-content">
+        <section>
+            <div class="sidebar">
+                @if (IsSectionDefined("SideBar"))
+                {
+                    @RenderSection("SideBar")
+                }
+                else
+                {
+                    <h2>opcional</h2>
+                }
+
+            </div>
+            <div class="content">
+                @RenderBody()
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <p>Info@medicos.com</p>
+    </footer>
+</body>
+</html>

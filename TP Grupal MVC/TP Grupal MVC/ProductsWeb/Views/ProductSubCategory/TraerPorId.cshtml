@@ -1,0 +1,50 @@
+﻿@model ProductsWeb.Models.ProductSubCategory
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TraerPorId</title>
+</head>
+<body>
+    <div>
+        <h4>ProductSubCategory</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductCategoryID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductCategoryID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedDate)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ProductSubcategoryID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

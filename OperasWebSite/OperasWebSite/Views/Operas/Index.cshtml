@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OperasWebSite.Models.Opera>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <p>
+            @Html.ActionLink("LogOff","LogOff","Account")
+            @Html.ActionLink("Crear nueva", "Create")
+        </p>
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Composer)
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Composer)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.OperaId })
+                        @Html.ActionLink("Detalle", "Detail", new { id = item.OperaId })
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.OperaId })
+                    </td>
+                </tr>
+             }
+        </table>
+    </div>
+</body>
+</html>

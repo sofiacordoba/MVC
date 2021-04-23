@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Form","Home",FormMethod.Post))
+            {
+            <table>
+                <tr>
+                    <td>
+                        @Html.Label("Name", "Name")
+                    </td>
+                    <td>
+                        @Html.TextBox("txtName", null, new { @class = "textbox", placeholder = "Enter Name:" })
+                    </td>
+
+
+                    <td>
+                        @Html.Label("Address", "Address")
+                    </td>
+                    <td>
+                        @Html.TextArea("Address", null, new { @class = "textarea", placeholder = "Enter Address", cols = 3, rows = 4 })
+                    </td>
+
+
+                    <td>
+                        @Html.Label("Gender", "Gender")
+                    </td>
+                    <td>
+                        Male: @Html.RadioButton("Gender", "Male", true)
+                        Female: @Html.RadioButton("Gender", "Female", false)
+                    </td>
+
+
+                    <td>
+                        @Html.Label("IsMarried", "Is Married")
+                    </td>
+                    <td>
+                        @Html.CheckBox("IsMarried", false)
+                    </td>
+
+
+                    <td>
+                        @Html.Label("Country", "Country")
+                    </td>
+                    <td>
+                        @Html.DropDownList("Country",
+                       new List<SelectListItem>
+                       {
+                           new SelectListItem{ Text="Argentina",Value="0"},
+                            new SelectListItem{ Text="Uruguay",Value="1"},
+                             new SelectListItem{ Text="Brasil",Value="2", Selected=true}
+                       }
+                       )
+                    </td>
+
+
+                    <td>
+                        @Html.Label("Password", "Password")
+                    </td>
+                    <td>
+                        @Html.Password("Password")
+                    </td>
+
+                    <td>
+                        <input type="submit" value="Save" />
+                    </td>
+
+                </tr>
+            </table>
+         }
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="~/content/PhotoSharingStyles.css" />
+</head>
+<body>
+    <div>
+        <h1 class="site-page-title">
+            Adventure Works Photo Sharing
+        </h1>
+
+        <div class="clear-floats" />
+
+        <div id="topmenu">
+            /*Aquí agregar el menu de navegación */
+            Usar etiqueta html 5 y diseñar está parte a gusto
+        </div>
+
+        <div id="breadcrumb">
+            /*Agregar un mensaje de bienvenida*/
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>
